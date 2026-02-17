@@ -3,6 +3,7 @@
 import { useRef, useCallback } from "react";
 
 const MAX_LOOPS = 3;
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export default function HeroVideo() {
   const loopCount = useRef(0);
@@ -20,7 +21,7 @@ export default function HeroVideo() {
   return (
     <video
       className="absolute inset-0 w-full h-full object-cover opacity-85 pointer-events-none"
-      src="/hero-bg.mp4"
+      src={`${basePath}/hero-bg.mp4`}
       autoPlay
       muted
       playsInline
