@@ -92,7 +92,7 @@ function DiagnosticContent() {
             />
           </Link>
           <span className="font-[family-name:var(--font-heading)] text-xs text-[var(--color-grey)]">
-            Pricing Coherence Diagnostic
+            Internal Market Clarity Diagnostic
           </span>
         </div>
       </header>

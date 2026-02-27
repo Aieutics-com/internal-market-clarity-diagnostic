@@ -4,13 +4,13 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Pricing Coherence Diagnostic — Aieutics",
+  title: "Internal Market Clarity Diagnostic — Aieutics",
   description:
-    "18 questions to test whether your pricing is validated by real buyers, compatible with their procurement process, and coherent with your ICP and value proposition.",
+    "18 binary questions to test whether your corporate innovation initiative has an internal market — by name, by role, with a real demand signal — before you build a pilot.",
   openGraph: {
-    title: "Pricing Coherence Diagnostic",
+    title: "Internal Market Clarity Diagnostic",
     description:
-      "Is your pricing grounded in buyer reality? A self-assessment for startup founders.",
+      "Does your initiative have an internal market? A self-assessment for corporate innovation teams.",
     type: "website",
   },
 };

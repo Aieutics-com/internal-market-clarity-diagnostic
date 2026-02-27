@@ -32,273 +32,253 @@ export interface PatternInterpretation {
 
 export const DIMENSIONS: Dimension[] = [
   {
-    id: "wtp-evidence",
-    name: "Willingness-to-Pay Evidence",
+    id: "internal-customer-identification",
+    name: "Internal Customer Identification",
     subtitle:
-      "Has anyone actually committed to paying — not just said they would?",
+      "Can you name the people — not functions — who will change their behaviour if this succeeds?",
     questions: [
       {
         id: 1,
-        text: "Has at least one buyer committed budget to your product — not \"expressed interest,\" not \"agreed in principle,\" but committed actual money or a signed agreement?",
+        text: "Can you name at least three people — by name and role — inside the organisation who will need to change how they work if this initiative succeeds?",
       },
       {
         id: 2,
-        text: "Do you have evidence of what buyers will pay that comes from real transactions or binding commitments — not surveys, not hypothetical conversations, not \"they said they'd pay X\"?",
+        text: "Do you know specifically what those people are currently doing on Monday morning that this initiative would change?",
       },
       {
         id: 3,
-        text: "Can you point to a price point that at least one buyer accepted without significant negotiation or discounting?",
+        text: "Is there evidence that these people are actively experiencing the problem this initiative is meant to solve — not just that they've agreed it sounds valuable when asked?",
       },
       {
         id: 4,
-        text: "If you raised your price by 20% tomorrow, do you know — from evidence, not intuition — whether your current buyers would still pay?",
+        text: "Can you clearly distinguish the people who would need to change their behaviour (who will adopt) from those who fund the initiative (sponsors) and those who simply have an opinion on it (stakeholders)?",
       },
     ],
     threshold: 2,
     reflection:
-      "Your pricing is a hypothesis, not a finding. The gap between what buyers say they'll pay and what they actually pay is where most pricing assumptions die. A tech fee from one client is not pricing validation — it's a data point of one.",
+      "Your internal customer is still a function, not a person. Functions don't change their Monday morning. People do.",
     reflectionPrompt:
-      "How many times has a buyer seen your price and said yes without negotiation? If the answer is zero, your price is a proposal, not a tested position.",
+      "If you emailed three people by name and asked them what they would need to stop doing to make room for this initiative, who would those three people be — and do you already know their answer?",
   },
   {
-    id: "pricing-model-fit",
-    name: "Pricing Model Fit",
+    id: "vp-translation",
+    name: "Value Proposition Translation",
     subtitle:
-      "Does your pricing structure match how your buyer budgets and buys?",
+      "Is the value stated in the internal customer's vocabulary — not yours?",
     questions: [
       {
         id: 5,
-        text: "Is your pricing model (per-seat, per-use, per-outcome, licence, subscription) based on how your buyer allocates budget — not on how you prefer to charge?",
+        text: "Can you state why this initiative should matter to the people who would need to adopt it — using the exact words they use to describe their own work, with no strategy, innovation, or programme terminology?",
       },
       {
         id: 6,
-        text: "Have you tested whether your pricing model creates the right incentive structure — where the buyer pays more as they get more value, not where price scales independently of value delivered?",
+        text: "Have you stated the case for this initiative directly to at least one person who would need to adopt it — and did they recognise themselves in it without being prompted?",
       },
       {
         id: 7,
-        text: "If your buyer's organisation restructured tomorrow, would your pricing model still make sense — or does it depend on a specific team size, department structure, or budget category that could change?",
+        text: "Does your case for this initiative explain why it is better than what those people are already doing — on criteria they actually care about, not criteria you think they should care about?",
       },
-    ],
-    threshold: 1,
-    reflection:
-      "Your pricing model was designed for your P&L, not for your buyer's budget process. A per-seat model for a product used by three people in a 50,000-person company is a structural mistake — not because the price is wrong, but because the model is incompatible with how enterprise buyers think about spend.",
-    reflectionPrompt:
-      "How does your buyer currently pay for the closest alternative to your product — including paying someone's salary, paying a consultant, or paying nothing? That's the pricing model your buyer already understands.",
-  },
-  {
-    id: "budget-procurement",
-    name: "Budget & Procurement Alignment",
-    subtitle:
-      "Do you know where your price lands inside the buyer's organisation?",
-    questions: [
       {
         id: 8,
-        text: "Can you name the specific budget line within your buyer's organisation that would fund your product — not \"IT budget\" or \"innovation budget\" but the actual line item?",
+        text: "Have you considered what happens to a person's career and standing if they adopt this initiative and it is then discontinued — and does your case for adoption account for that risk?",
       },
+    ],
+    threshold: 2,
+    reflection:
+      "Your value proposition exists in your language, not theirs. If the internal customer can't repeat it without your slides, you haven't translated. You've presented.",
+    reflectionPrompt:
+      "If one of your internal customers had to explain this initiative to their team tomorrow — with no documents from you — what words would they use? Have you ever heard those words?",
+  },
+  {
+    id: "adoption-cost-awareness",
+    name: "Adoption Cost Awareness",
+    subtitle:
+      "Has the initiative team counted what adoption will cost the people whose behaviour needs to change?",
+    questions: [
       {
         id: 9,
-        text: "Do you know whether your price falls above or below the procurement threshold that triggers a formal purchasing process in your target buyer's organisation?",
+        text: "Have you estimated how much time and effort it will take for people to learn and integrate this initiative into their working week — and is that estimate based on what they say, not what you assume?",
       },
       {
         id: 10,
-        text: "Have you identified who controls the budget your product would come from — and is that person the same as, or different from, your champion?",
+        text: "Have you considered the career risk of adoption: whether being publicly associated with this initiative could create exposure for someone if it stalls, or mark them as 'the innovation person' in a culture that rewards operational delivery?",
       },
       {
         id: 11,
-        text: "Do you know the typical approval timeline for a purchase at your price point in your buyer's organisation — and have you built that timeline into your sales forecast?",
+        text: "Have you mapped what people will have to stop doing — or stop prioritising — while adopting this initiative, and whether those activities affect their performance review?",
+      },
+      {
+        id: 12,
+        text: "Have you considered what it would cost people to revert to their previous way of working if this initiative is discontinued — and have you taken steps to make that reversal easier or less risky?",
       },
     ],
     threshold: 2,
     reflection:
-      "You know your buyer likes your product but you don't know where the money comes from. In enterprise, \"Which budget line?\" is not a finance question — it's a power question. The person who controls the budget controls the decision. If you can't name them, you're selling to the wrong room. Note: if you're pre-revenue or targeting deals under \u20AC25K, this dimension matters less right now — most sub-threshold purchases don't trigger formal procurement. But if you're targeting enterprise contracts, this is structural.",
+      "The initiative team is counting the value. The internal customer is counting the cost. You've been working with one column. They're working with two.",
     reflectionPrompt:
-      "In your last deal that stalled, was it the product that failed — or was it that no one could find the budget? If it's the second, your pricing problem is not the number. It's the location.",
+      "Of the four cost types — workload, political, opportunity, switching — which one has the most power to kill adoption in your specific context? Is that assessment yours, or did an internal customer tell you that?",
   },
   {
-    id: "unit-economics",
-    name: "Unit Economics & Value Capture",
+    id: "triangle-health",
+    name: "Triangle Health",
     subtitle:
-      "Does your pricing capture enough of the value you create to build a business?",
+      "Is the relationship between your initiative team, your sponsor, and the people you need to adopt this understood and actively managed?",
     questions: [
       {
-        id: 12,
-        text: "Can you state what it costs you to deliver your product to one additional customer — and is that number based on actual delivery experience, not projections?",
-      },
-      {
         id: 13,
-        text: "At your current price point, does the margin per customer cover the cost of acquiring that customer within a reasonable timeframe?",
+        text: "Do you understand what the executive sponsor actually needs from this initiative — what success looks like for them personally, and what would cause them to withdraw support — beyond their stated backing?",
       },
       {
         id: 14,
-        text: "Is your price anchored in the value you create for the buyer (cost saved, revenue generated, risk reduced) rather than in your cost to deliver?",
+        text: "Have you had a direct conversation with at least one person who would need to adopt this initiative about why they personally would or would not change how they work?",
       },
       {
         id: 15,
-        text: "Do you know the ROI framing your buyer needs to justify this purchase internally — and does your price fit within that framing?",
-      },
-    ],
-    threshold: 2,
-    reflection:
-      "You may be building revenue without building a business. Revenue that doesn't cover acquisition costs is a subsidy, not a business model. And pricing that's anchored in your cost-to-deliver rather than the buyer's value-received leaves money — and positioning — on the table.\n\nTwo pricing anchors exist, and you should know which one you're using. The first: what does the problem cost the buyer today? This is present-state, measurable, and available before you have a working product. The second: what ROI does your solution generate, and what share do you capture? The rule of thumb is 20\u201330% of the value created. If you can only answer the first, that's fine at this stage — but if you can't answer either, your price is a guess.",
-    reflectionPrompt:
-      "If your buyer saves \u20AC500K per year using your product and you charge \u20AC10K, you're not cheap — you're badly positioned. What is the value you create, and what fraction of it does your price capture?",
-  },
-  {
-    id: "triangle-coherence",
-    name: "Triangle Coherence",
-    subtitle:
-      "Does your pricing reinforce your ICP and value proposition — or contradict them?",
-    questions: [
-      {
-        id: 16,
-        text: "If you changed your ICP tomorrow — targeting a different buyer in a different type of organisation — would you also need to change your pricing? If the answer is no, your pricing may not be connected to your buyer.",
-      },
-      {
-        id: 17,
-        text: "Does your pricing signal the same positioning as your value proposition? (Premium price for premium value, volume price for operational efficiency, outcome-based price for measurable impact.)",
-      },
-      {
-        id: 18,
-        text: "Can your buyer look at your price and immediately understand what they're getting — or does your pricing require a separate explanation that contradicts or complicates your value proposition?",
+        text: "Can you identify the most likely way this initiative could fail — well-funded but never actually adopted by the people who matter, genuinely supported by users but without the institutional backing to sustain it, or appearing to progress while no one's actual working patterns are changing — and do you have specific evidence for that assessment?",
       },
     ],
     threshold: 1,
     reflection:
-      "Your price is telling a different story than your value proposition. This is the Layer 1 triangle failure: three elements that should reinforce each other are operating independently. A premium value proposition with a bargain price confuses the buyer. A cost-reduction value proposition with an outcome-based price creates friction. When the triangle is broken, the symptom shows up downstream as \"deals stalling for no clear reason\" — but the reason is that the buyer's internal logic can't reconcile what you say with what you charge.",
+      "The triangle has three vertices. You're managing two. The one you haven't managed is where the initiative will stall.",
     reflectionPrompt:
-      "Imagine your buyer is explaining your product and price to their boss. Does the price reinforce the story — or does it require a separate justification?",
+      "Which of the three failure modes — funded but not adopted, grassroots without structure, or innovation theatre — is your initiative closest to right now? What evidence supports that answer, and what would have to change before it didn't?",
+  },
+  {
+    id: "channel-classification-alignment",
+    name: "Channel & Classification Alignment",
+    subtitle:
+      "Is your approach to reaching internal customers calibrated for what your initiative actually is?",
+    questions: [
+      {
+        id: 16,
+        text: "Have you clearly defined what kind of change this initiative actually requires — incremental improvement to existing practice, a new capability alongside current work, or a fundamental shift in how people operate — and is that distinction actively shaping how you approach the adoption challenge?",
+      },
+      {
+        id: 17,
+        text: "Is the way you're reaching the people who need to adopt this initiative appropriate for the scale of change it requires — for example, not relying primarily on top-down instruction for something that requires people to fundamentally change how they work?",
+      },
+      {
+        id: 18,
+        text: "Is the effort you've invested in identifying who would adopt this, understanding why they would, and mapping what it will cost them — proportionate to how significant a change this initiative actually requires?",
+      },
+    ],
+    threshold: 1,
+    reflection:
+      "Classification isn't a label you apply once and file. It determines everything: who the internal customer is, what the value proposition must do, how to reach them, and how much adoption cost is acceptable before the initiative becomes unviable.",
+    reflectionPrompt:
+      "If your initiative is transformation-class, are you doing transformation-level Layer 1 work — months of direct customer contact, multi-channel reach, value proposition co-development? Or are you treating it like an optimisation?",
   },
 ];
 
 export const PATTERN_INTERPRETATIONS: PatternInterpretation[] = [
   {
-    id: "revenue-without-pricing",
-    label: "Revenue without pricing",
+    id: "funded-not-adopted",
+    label: "Funded but not adopted",
     description:
-      "Someone is paying, but you don't know why the model works or where the money comes from. Revenue is masking a structural gap. This pattern produces growth that can't be replicated — because the pricing that got the first client was situational, not systematic.",
+      "The budget is allocated. The governance structure is established. The sponsor relationship is working. But the people who would need to change how they work don't yet have a value proposition in their vocabulary, and the costs of adoption haven't been mapped. This is the most common Layer 1 failure mode — and the hardest to detect, because funding creates the appearance of progress. The initiative team is solving a Layer 0 problem. The Layer 1 problem is untouched.",
     condition: (results) => {
-      const wtp = results.find((r) => r.dimension.id === "wtp-evidence");
-      const model = results.find(
-        (r) => r.dimension.id === "pricing-model-fit"
-      );
-      const budget = results.find(
-        (r) => r.dimension.id === "budget-procurement"
+      const vp = results.find((r) => r.dimension.id === "vp-translation");
+      const cost = results.find(
+        (r) => r.dimension.id === "adoption-cost-awareness"
       );
       return (
-        wtp !== undefined &&
-        model !== undefined &&
-        budget !== undefined &&
-        (wtp.status === "green" || wtp.status === "amber") &&
-        model.status === "red" &&
-        budget.status === "red"
+        vp !== undefined &&
+        cost !== undefined &&
+        vp.status === "red" &&
+        cost.status === "red"
       );
     },
   },
   {
-    id: "price-without-home",
-    label: "Price without a home",
+    id: "translation-gap",
+    label: "Translation gap",
     description:
-      "Your pricing is sound in theory but has no location inside the buyer's organisation. \"Which budget line?\" is the question you can't answer. Above the line or below the line? OPEX or CAPEX? Innovation budget or operational budget? Until you know, your deal depends on your champion finding the money — which is not their job.",
+      "You know who your internal customers are, and you've done the work to understand what adoption costs them. But you cannot yet state the value proposition in their vocabulary — or it hasn't been validated with them. The understanding exists. The translation doesn't. This is often a proximity problem: the initiative team knows the customer exists but has not spent enough time in their operational environment to speak their language.",
     condition: (results) => {
-      const budget = results.find(
-        (r) => r.dimension.id === "budget-procurement"
+      const d1 = results.find(
+        (r) => r.dimension.id === "internal-customer-identification"
       );
-      const othersGreen = results.filter(
-        (r) =>
-          r.dimension.id !== "budget-procurement" &&
-          (r.status === "green" || r.status === "amber")
+      const vp = results.find((r) => r.dimension.id === "vp-translation");
+      const cost = results.find(
+        (r) => r.dimension.id === "adoption-cost-awareness"
       );
       return (
-        budget !== undefined &&
-        budget.status === "red" &&
-        othersGreen.length >= 2
+        d1 !== undefined &&
+        vp !== undefined &&
+        cost !== undefined &&
+        (d1.status === "green" || d1.status === "amber") &&
+        vp.status === "red" &&
+        (cost.status === "green" || cost.status === "amber")
       );
     },
   },
   {
-    id: "founder-set-pricing",
-    label: "Founder-set pricing",
+    id: "adoption-cost-blindness",
+    label: "Adoption cost blindness",
     description:
-      "Your unit economics make sense on paper, but no buyer has validated the price. This is pricing designed in a spreadsheet, not in a negotiation. The most common version: the founder picks a number that looks reasonable, never tests it, and discovers the problem only when deals stall.",
+      "The value proposition sounds compelling. But the adoption cost analysis is missing. Internal customers are doing a private calculation you haven't done — and their answer is different from yours. This is why initiatives stall after pilot sign-up: the value proposition secured agreement. The unexamined adoption costs prevented behaviour change.",
     condition: (results) => {
-      const wtp = results.find((r) => r.dimension.id === "wtp-evidence");
-      const unit = results.find((r) => r.dimension.id === "unit-economics");
+      const vp = results.find((r) => r.dimension.id === "vp-translation");
+      const cost = results.find(
+        (r) => r.dimension.id === "adoption-cost-awareness"
+      );
       return (
-        wtp !== undefined &&
-        unit !== undefined &&
-        wtp.status === "red" &&
-        (unit.status === "amber" || unit.status === "green")
+        vp !== undefined &&
+        cost !== undefined &&
+        (vp.status === "green" || vp.status === "amber") &&
+        cost.status === "red"
       );
     },
   },
   {
-    id: "broken-triangle",
-    label: "Broken triangle",
+    id: "triangle-misread",
+    label: "Triangle misread",
     description:
-      "Your pricing is disconnected from your ICP and value proposition. This is the most common Layer 1 failure pattern — founders set ICP, value prop, and pricing independently, as if they were three separate decisions. They're one decision with three faces. When the triangle is broken, every downstream layer inherits the incoherence.",
+      "Real work has been done on at least one dimension of internal market clarity — but the three-way dynamic between the initiative team, the sponsor, and the internal customer hasn't been mapped. Unmanaged triangles don't stay stable: they produce one of three failure modes, usually the one the initiative team was least expecting.",
     condition: (results) => {
       const triangle = results.find(
-        (r) => r.dimension.id === "triangle-coherence"
+        (r) => r.dimension.id === "triangle-health"
       );
-      const othersRed = results.filter(
-        (r) => r.dimension.id !== "triangle-coherence" && r.status === "red"
+      const othersNotRed = results.filter(
+        (r) =>
+          r.dimension.id !== "triangle-health" &&
+          (r.status === "green" || r.status === "amber")
       );
       return (
         triangle !== undefined &&
         triangle.status === "red" &&
-        othersRed.length >= 1
+        othersNotRed.length >= 1
       );
     },
   },
   {
-    id: "universally-unvalidated",
-    label: "Universally unvalidated",
+    id: "foundation-before-pilots",
+    label: "Foundation before pilots",
     description:
-      "Your pricing is a placeholder, not a strategy. This isn't a refinement problem — it's a discovery problem. Before optimising your price point, you need to answer three structural questions: Who is paying? From which budget? For which value? Those answers come from buyer conversations, not internal modelling.",
+      "Internal market clarity is at the hypothesis stage across all dimensions. This is not a refinement problem or a communication problem — it is a discovery problem. Before designing a pilot, building the internal business case, or engaging procurement, the priority is direct, substantive contact with the people who would need to change their behaviour. Not stakeholder workshops. Not steering committee presentations. Conversations in their operational environment, without slides, about why they would or would not change how they work.",
     condition: (results) => {
       const totalScore = results.reduce((sum, r) => sum + r.score, 0);
       return totalScore <= 8;
     },
   },
-  {
-    id: "model-misfit",
-    label: "Model misfit",
-    description:
-      "Your pricing level may be defensible, but the pricing structure is wrong for how your buyer budgets, experiences, or measures value. How you charge is often more important than how much you charge. A founder can have validated willingness-to-pay, know the budget location, and still have a model that creates friction — per-seat when usage-based fits, subscription when outcome-based would close faster.",
-    condition: (results) => {
-      const model = results.find(
-        (r) => r.dimension.id === "pricing-model-fit"
-      );
-      const othersOk = results.filter(
-        (r) =>
-          r.dimension.id !== "pricing-model-fit" &&
-          (r.status === "green" || r.status === "amber")
-      );
-      return (
-        model !== undefined &&
-        model.status === "red" &&
-        othersOk.length >= 2
-      );
-    },
-  },
 ];
 
 export const COI_COPY = {
-  heading: "The Downstream Cost of Unvalidated Pricing",
+  heading: "The Downstream Cost of Skipping Layer 1",
   intro:
-    "Pricing gaps don't announce themselves. They surface as downstream symptoms: deals that stall at procurement, champions who can't build a business case, pilots that succeed but never convert to contracts.",
-  body: "Founders who defer pricing discovery typically encounter it as a Layer 2 or Layer 3 problem — \"our pilot didn't convert\" or \"our pipeline isn't closing\" — when the structural issue is one layer upstream. The buyer couldn't find the budget. The price didn't match the value type. The model didn't fit the procurement process. By then, months of commercial effort have been built on a pricing assumption no one tested.",
+    "Layer 1 failures don't surface as Layer 1 problems. They surface at Layer 2 as low pilot adoption, at Layer 3 as results that can't be replicated, and at Layer 4 as organisations reverting to previous behaviours after the programme ends.",
+  body: "By the time the Layer 1 failure is visible, the initiative has already consumed significant resources — pilot time, sponsor goodwill, team credibility — trying to solve a Layer 2 or Layer 3 problem that isn't one. Initiative teams misattribute the cause. They invest in change management (the symptom) rather than internal market clarity (the cause). The question this diagnostic surfaces is not \"how do we fix adoption?\" It is: \"Do we have an internal market to adopt anything?\"",
 };
 
 export const CTA_COPY = {
   heading: "What This Diagnostic Surfaces — and What It Can't Fix",
-  body: `This tool reveals where your pricing has structural gaps. It doesn't set your price — because the right price depends on your specific buyer, their budget structure, their procurement process, and the value type they decide on.
+  body: `This tool reveals where your internal market clarity has structural gaps. It doesn't close them — because resolution requires direct, substantive contact with the people who would need to change their behaviour: observing them in their operational environment, building relationships, and co-developing the value proposition in their vocabulary.
 
-Pricing work is positioning work. It requires understanding not just what your product costs to deliver, but what value it creates, how the buyer measures that value, and where inside their organisation the money would come from. A generic pricing adjustment won't fix a structural misalignment between your price and your buyer's decision logic.`,
+Self-assessment can name the gap. It cannot bridge it.`,
   callout:
-    "If your profile shows gaps in two or more dimensions, a structured pricing workshop can help you identify whether this is a number problem, a model problem, or a positioning problem — and what to address first.",
+    "If your profile shows gaps in two or more dimensions, a structured Layer 1 workshop can help identify what has to be true before any pilot is designed — and what kind of direct customer work would get you there.",
   triangleReminder:
-    "Your pricing doesn't exist in isolation. It must cohere with your ICP (who pays) and your value proposition (what they're paying for). If you haven't assessed those, start there.",
+    "This diagnostic focuses on Layer 1. If your results raise questions across multiple layers — about pilot design, scaling, or embedding — the Corporate Innovation Diagnostic provides a full-frame view of where your organisation stands across the entire Critical Path.",
   contact: {
     name: "Alexandra N.",
     title: "Founder, Aieutics",
@@ -309,4 +289,4 @@ Pricing work is positioning work. It requires understanding not just what your p
 };
 
 export const ATTRIBUTION =
-  "Developed by Aieutics from the Critical Path Layers framework. Based on patterns observed across executive coaching, corporate accelerator programmes, and consulting engagements.";
+  "Developed by Aieutics from the Critical Path Layers (Corporate) framework. Based on patterns observed across executive coaching, corporate accelerator programmes, and consulting engagements.";

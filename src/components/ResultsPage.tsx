@@ -50,7 +50,7 @@ export default function ResultsPage({
           Your Results
         </p>
         <h2 className="font-[family-name:var(--font-heading)] text-2xl md:text-3xl font-bold mb-4">
-          Pricing Coherence Profile
+          Internal Market Clarity Profile
         </h2>
         <div className="flex items-baseline gap-1 mb-4">
           <span className="font-[family-name:var(--font-heading)] text-6xl md:text-7xl font-bold tracking-tight text-[var(--color-orange)]">

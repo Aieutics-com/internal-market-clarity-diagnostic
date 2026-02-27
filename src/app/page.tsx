@@ -33,20 +33,20 @@ export default function Home() {
 
         <div className="max-w-2xl mx-auto text-center relative z-10">
           <h1 className="font-[family-name:var(--font-heading)] text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white animate-text-focus-in">
-            Is Your Pricing Grounded
+            Does Your Initiative Have
             <br />
-            in <span className="text-[var(--color-orange)]">Buyer Reality?</span>
+            an <span className="text-[var(--color-orange)]">Internal Market?</span>
           </h1>
 
           <p className="font-[family-name:var(--font-body)] text-lg md:text-xl text-white/80 leading-relaxed mb-4">
             18 binary questions. 5 dimensions. No middle ground.
           </p>
           <p className="font-[family-name:var(--font-body)] text-base md:text-lg text-white/70 leading-relaxed mb-10 max-w-xl mx-auto">
-            Most founders set a price and move on. This diagnostic tests
-            whether your pricing is validated by real buyers, structured for
-            how they budget, and coherent with your ICP and value proposition.
-            Because a price that can&apos;t navigate procurement is not a
-            price — it&apos;s a wish.
+            Most corporate innovation initiatives skip from &ldquo;problem is funded&rdquo;
+            to &ldquo;pilot is designed&rdquo; without establishing who inside the
+            organisation will actually adopt the output. Funding is not adoption.
+            This diagnostic tests whether you have an internal market — before
+            you build a pilot around one that doesn&apos;t exist.
           </p>
 
           <button
@@ -67,24 +67,24 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-5 gap-4 text-left">
               {[
                 {
-                  label: "WTP Evidence",
-                  desc: "Has anyone actually committed to paying?",
+                  label: "Internal Customer",
+                  desc: "Can you name the people — not functions — who will change their behaviour?",
                 },
                 {
-                  label: "Pricing Model Fit",
-                  desc: "Does your structure match how your buyer budgets?",
+                  label: "VP Translation",
+                  desc: "Is the value stated in the customer's vocabulary, validated by them?",
                 },
                 {
-                  label: "Budget Alignment",
-                  desc: "Do you know where the money comes from inside the buyer's organisation?",
+                  label: "Adoption Cost",
+                  desc: "Have you mapped what adoption costs — workload, political, opportunity, switching?",
                 },
                 {
-                  label: "Unit Economics",
-                  desc: "Does your price capture enough value to build a business?",
+                  label: "Triangle Health",
+                  desc: "Is the initiative team / sponsor / customer dynamic understood and managed?",
                 },
                 {
-                  label: "Triangle Coherence",
-                  desc: "Does your pricing reinforce your ICP and value proposition?",
+                  label: "Classification Fit",
+                  desc: "Is your Layer 1 effort calibrated for your initiative's actual classification?",
                 },
               ].map((dim, i) => (
                 <div
@@ -145,10 +145,10 @@ export default function Home() {
               This tool is available to Aieutics clients
             </p>
             <p className="font-[family-name:var(--font-body)] text-sm text-white/60 leading-relaxed mb-6">
-              The Pricing Coherence Diagnostic is part of Aieutics consulting and coaching engagements. If you would like to learn more or request access, get in touch.
+              The Internal Market Clarity Diagnostic is part of Aieutics consulting and coaching engagements for corporate innovation teams. If you would like to learn more or request access, get in touch.
             </p>
             <a
-              href="mailto:alexandra@aieutics.com?subject=Request%20info%3A%20Pricing%20Coherence%20Diagnostic"
+              href="mailto:alexandra@aieutics.com?subject=Request%20info%3A%20Internal%20Market%20Clarity%20Diagnostic"
               className="inline-block bg-[var(--color-orange)] text-white font-[family-name:var(--font-heading)] font-bold text-sm px-8 py-3 rounded-xl hover:shadow-[0_0_30px_rgba(255,95,31,0.3)] hover:scale-[1.02] transition-all duration-300"
             >
               Request Information

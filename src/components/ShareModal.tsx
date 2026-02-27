@@ -83,7 +83,7 @@ export default function ShareModal({
 
     const body = `Hello ${firstName},
 
-Here are your Pricing Coherence Diagnostic results.
+Here are your Internal Market Clarity Diagnostic results.
 
 Score: ${totalScore}/${totalMax}
 
@@ -95,7 +95,7 @@ View full results: ${shareUrl}
 Aieutics — See further. Think deeper. Break through.
 https://aieutics.com`;
 
-    const subject = "Pricing Coherence Diagnostic — Your Results";
+    const subject = "Internal Market Clarity Diagnostic — Your Results";
     const mailto = `mailto:?bcc=hello@aieutics.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     track("email_shared");
