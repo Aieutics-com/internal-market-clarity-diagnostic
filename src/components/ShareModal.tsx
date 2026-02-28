@@ -147,7 +147,7 @@ https://aieutics.com`;
             Share Your Results
           </h3>
           <p className="font-[family-name:var(--font-body)] text-sm text-[var(--color-grey)] mb-7">
-            Send your pricing coherence profile by email or copy the link
+            Send your internal market clarity profile by email or copy the link
           </p>
 
           <div className="mb-5">
