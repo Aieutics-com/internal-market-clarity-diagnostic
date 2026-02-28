@@ -27,9 +27,9 @@ export default function COISection({ results }: COISectionProps) {
           {totalNos}
         </p>
         <p className="font-[family-name:var(--font-body)] text-sm text-[var(--color-grey-light)]">
-          gaps in your pricing coherence — each one a compounding risk that
-          surfaces downstream as stalled deals, failed pilots, or pipeline that
-          doesn&apos;t convert.
+          gaps in your internal market clarity — each one a compounding risk that
+          surfaces downstream as low pilot adoption, stalled scaling, or
+          initiatives that revert after the programme ends.
         </p>
       </div>
     </section>

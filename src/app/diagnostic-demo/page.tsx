@@ -31,7 +31,7 @@ function DiagnosticContent() {
         setShowResults(true);
       }
     } else if (!hasTrackedStart.current) {
-      track("pricing_diagnostic_started");
+      track("imc_diagnostic_started");
       hasTrackedStart.current = true;
     }
   }, [searchParams]);
@@ -54,7 +54,7 @@ function DiagnosticContent() {
       setCurrentStep((prev) => prev + 1);
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
-      track("pricing_diagnostic_completed");
+      track("imc_diagnostic_completed");
       setShowResults(true);
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
